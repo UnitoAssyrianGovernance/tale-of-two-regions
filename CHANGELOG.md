@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.1] - 2025-09-29
 
-Submission version
+Submission version.
 
 This release publish the data and code as part of the submission process.
 
@@ -16,7 +16,7 @@ This release publish the data and code as part of the submission process.
 
 ### Added
 
-Initial commit (<a href="https://github.com/UnitoAssyrianGovernance/tales-of-two-regions/commit/ca7f855407c2dadbfbc549ebbc5f724d251c8eaf">ca7f855</a>)
+Initial commit (<a href="https://github.com/UnitoAssyrianGovernance/tales-of-two-regions/commit/84c5a88bd40dcfe83f9f03c1db9a5d26fede56d1">84c5a88</a>)
 
 
 </details>
