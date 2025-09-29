@@ -1,0 +1,6 @@
+"","Counts","Aoristic Weight","Area","Simulated","SPD"
+"Counts",1,0.86,0.95,0.86,0.58
+"Aoristic Weight",0.86,1,0.88,0.96,0.61
+"Area",0.95,0.88,1,0.89,0.64
+"Simulated",0.86,0.96,0.89,1,0.58
+"SPD",0.58,0.61,0.64,0.58,1

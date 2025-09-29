@@ -1,0 +1,2 @@
+This is a placeholder file that tells R to use {renv} on startup (see  the .RProfile)
+If you don't want to use {renv}, you can safely delete this file.
