@@ -161,7 +161,7 @@ convert_kde_to_terra <- function(dens_list, crs_source, spat_window, periods) {
 # Returns:
 #   No return value; creates a plot
 # Note: it might be better to make the additional objects optional in the future
-plot_dens_with_dem <- function(kde, dem, rivers, lakes, dem_pal, dens_pal,
+plot_dens_with_dem <- function(kde, dem, rivers, lakes, plot_study_area = TRUE, study_area, dem_pal, dens_pal,
   zoom_ext, buffer_level, plot_title) {
 
   dem_pal <- map.pal(dem_pal, n = 1000)
@@ -192,6 +192,11 @@ plot_dens_with_dem <- function(kde, dem, rivers, lakes, dem_pal, dens_pal,
   plot(kde, col = scales::alpha(dens_pal, 0.75), add = TRUE, buffer = TRUE,
     tick = "out", plg = list(nudge = 0.08, format = "g"), mar = c(1.1, 0.5, 2.1, 7.1)
   )
+  if (plot_study_area) {
+    study_area_vect <- terra::vect(study_area)
+    study_area_vect <- terra::project(study_area_vect, terra::crs(dem))
+    polys(study_area_vect, border = "yellow", lwd = 0.8)
+  }
   text(sites_to_plot, labels = sites_to_plot$Name, pos = 4, offset = 0.2, col = "black", halo = TRUE, hc = "white", hw = 0.25)
   north(type = 1, xy = c(extent$xmin + 0.18, extent$ymax - 0.2), head = 0.05, d = 0.1)
   sbar(d = 25,xy = c(extent$xmin + 0.05, extent$ymax - 0.37),type = "line",
@@ -224,7 +229,7 @@ plot_dens_with_dem <- function(kde, dem, rivers, lakes, dem_pal, dens_pal,
 #   No return value; saves a PNG file with the multi-panel plot
 # Notes: in the future, make the number of columns not hardcoded
 # same with the output dimensions and resolutions
-plot_density_maps <- function(terra_dens_list, dem, rivers, lakes, dem_pal, dens_pal,
+plot_density_maps <- function(terra_dens_list, dem, rivers, study_area = NULL, lakes, dem_pal, dens_pal,
   spat_window, buffer_level, periods, letters_to_use, output_dir, output_name) {
   n_periods <- length(periods)
   n_cols <- 3
@@ -250,6 +255,7 @@ plot_density_maps <- function(terra_dens_list, dem, rivers, lakes, dem_pal, dens
       dem = dem,
       rivers = rivers,
       lakes = lakes,
+      study_area = study_area,
       dem_pal = dem_pal,
       dens_pal = dens_pal,
       zoom_ext = spat_window,

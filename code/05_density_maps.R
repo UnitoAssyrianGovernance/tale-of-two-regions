@@ -295,6 +295,7 @@ for (j in seq_along(bw_list)) {
     dem = dem,
     rivers = rivers,
     lakes = lakes,
+    study_area = study_area,
     dem_pal = "grey",
     dens_pal = "plasma",
     spat_window = study_area,

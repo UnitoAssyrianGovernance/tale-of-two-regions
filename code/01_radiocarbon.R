@@ -10,7 +10,7 @@
 # Set-up -----------------------------------------------------------------------
 
 # Decide weather to load the RData file with the outputs of this analyses or not.
-load_data <- FALSE
+load_data <- TRUE
 
 # Load required libraries
 required_packages <- c("here", "rcarbon", "doParallel", "terra")
@@ -601,6 +601,8 @@ abline(v = seq(6500, 2500, -250), lty = "dotted", col = "white")
 text(x = 6400, ymax * 5.6, labels = "a. All Dates", font = 2, cex = 0.9, adj = c(0, 0.7))
 text(x = 6400, ymax * 4.9, labels = paste("n=", nrow(rc_dates), ", sites=", length(unique(rc_dates$SiteID)), ", bins=", length(unique(bins)), sep = ""), font = 1, cex = 0.9, adj = c(0, 0.7))
 legend(x = 6400, ymax * 4.85, legend = c("SPD normalised", "cKDE"), lty = c("solid", "solid"), lwd = c(3, 0.5), col = c("grey90", "lightslateblue"), bty = "n", cex = 0.9)
+segments(2750, ymax * 5.9, 2350, ymax * 5.9, lty = "solid", col = "grey23", lwd = (1))
+text(x = 2550, ymax * 5.91, labels = "Hallstat Plataeu", lty = c("solid"), col = "grey23", font = 2, cex = 0.7, adj = c(0.5, -0.5))
 box()
 
 # Plot CKDE on top
@@ -621,6 +623,8 @@ legend(
 )
 text(x = 6350, ymax * 0.92, labels = "b. Exponential Fit", font = 2, cex = 0.8, adj = c(0, 0.7))
 text(x = 6200, ymax * 0.52, cex = 0.7, adj = c(0, 0.7), labels = substitute(paste(italic(p), "=", x, sep = ""), list(x = round(exp_null_model$pval, 4))))
+segments(2750, ymax * 0.9, 2350, ymax * 0.9, lty = "solid", col = "grey23", lwd = (1))
+text(x = 2550, ymax * 0.91, labels = "Hallstat Plataeu", lty = c("solid"), col = "grey23", font = 2, cex = 0.7, adj = c(0.5, -0.5))
 box()
 
 # Plot Logistic Model
@@ -667,6 +671,8 @@ text(x = 2580, 0, labels = "C", lty = c("solid"), col = "darkolivegreen", font =
 segments(2489, ymax * 0.08, 2489, ymax * 0, lty = "solid", col = "darkolivegreen", lwd = (1.2))
 segments(2489, ymax * 0.08, 2283, ymax * 0.08, lty = "solid", col = "darkolivegreen", lwd = (1.2))
 text(x = 2420, 0, labels = "III", lty = c("solid"), col = "darkolivegreen", font = 2, cex = 0.65, adj = c(0.5, -1.4))
+segments(2750, ymax * 0.9, 2350, ymax * 0.9, lty = "solid", col = "grey23", lwd = (1))
+text(x = 2550, ymax * 0.91, labels = "Hallstat Plataeu", lty = c("solid"), col = "grey23", font = 2, cex = 0.7, adj = c(0.5, -0.5))
 
 # Add axes
 xticks <- seq(6500, 2200, -250)
@@ -695,6 +701,8 @@ legend(
 )
 text(x = 6350, ymax * 0.92, labels = "a. Logistic Fit - Samaria", font = 2, cex = 0.6, adj = c(0, 0.7))
 text(x = 6200, ymax * 0.56, cex = 0.7, adj = c(0, 0.7), labels = substitute(paste(italic(p), "=", x, sep = ""), list(x = round(logistic_model_samaria$pval, 4))))
+segments(2750, ymax * 0.9, 2350, ymax * 0.9, lty = "solid", col = "grey23", lwd = (1))
+text(x = 2550, ymax * 0.91, labels = "Hallstat Plataeu", lty = c("solid"), col = "grey23", font = 2, cex = 0.45, adj = c(0.5, -0.5))
 box()
 par(mar = c(7, 1, 0, 1)) # c(bottom, left, top, right)
 ymax <- max(logistic_model_judah$result$PrDens) * 1.1
@@ -709,6 +717,8 @@ legend(
 )
 text(x = 6350, ymax * 0.92, labels = "b. Logistic Fit - Judah", font = 2, cex = 0.6, adj = c(0, 0.7))
 text(x = 6200, ymax * 0.52, cex = 0.7, adj = c(0, 0.7), labels = substitute(paste(italic(p), "=", x, sep = ""), list(x = round(logistic_model_judah$pval, 4))))
+segments(2750, ymax * 0.9, 2350, ymax * 0.9, lty = "solid", col = "grey23", lwd = (1))
+text(x = 2550, ymax * 0.91, labels = "Hallstat Plataeu", lty = c("solid"), col = "grey23", font = 2, cex = 0.45, adj = c(0.5, -0.5))
 box()
 xticks <- seq(6500, 2200, -250)
 axis(side = 1, at = xticks, labels = xticks, las = 2, cex.axis = 0.8) # add BP axis
