@@ -5,9 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-12-18
+## [1.0.1] - 2025-12-18
 
-Manuscript accepted version
+Archive on Zenodo
+
+<details>
+<summary>Expand for commit details</summary>
+
+### Changed
+
+Update README.md (<a href="https://github.com/UnitoAssyrianGovernance/tales-of-two-regions/commit/5452ea718af60da84461d35b396ac41e4ce2b391">5452ea7</a>)
+
+
+</details>
+
+## [1.0.0] - 2025-12-18
 
 <details>
 <summary>Expand for commit details</summary>
@@ -31,6 +43,7 @@ Initial commit (<a href="https://github.com/UnitoAssyrianGovernance/tales-of-two
 
 </details>
 
+[1.0.1]: https://github.com/UnitoAssyrianGovernance/tale-of-two-regions/compare/1.0.0..1.0.1
 [1.0.0]: https://github.com/UnitoAssyrianGovernance/tale-of-two-regions/compare/0.0.1..1.0.0
 [0.0.1]: https://github.com/UnitoAssyrianGovernance/tale-of-two-regions/tree/0.0.1
 
