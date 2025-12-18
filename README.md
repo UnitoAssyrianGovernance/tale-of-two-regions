@@ -1,13 +1,16 @@
 # Data and code for A Tale of Two Regions: Cyclical Human-Climate Interactions in the South Levant from the Chalcolithic to the Iron Age (6500 – 2200 BP).
 
 <!-- DOI and version badges here -->
+
+[![DOI](https://zenodo.org/badge/1066523707.svg)](https://doi.org/10.5281/zenodo.17977298)
+
 ![GitHub Release](https://img.shields.io/github/v/release/UnitoAssyrianGovernance/tale-of-two-regions?include_prereleases&sort=semver&color=cyan)
 
 **Andrea Titolo**, **Alessio Palmisano**
 
-This repository contains the code written in R programming language to reproduce analyses and figures of the paper: Titolo, A., and Palmisano, A., TBA. A Tale of Two Regions: Cyclical Human-Climate Interactions in the South Levant from the Chalcolithic to the Iron Age (6500 – 2200 BP). Submitted to [Quaternary Science Reviews](https://www.sciencedirect.com/journal/quaternary-science-reviews) Journal.
+This repository contains the code written in R programming language to reproduce analyses and figures of the paper: Titolo, A., and Palmisano, A., TBA. A Tale of Two Regions: Cyclical Human-Climate Interactions in the South Levant from the Chalcolithic to the Iron Age (6500 – 2200 BP). Submitted for publication to [Quaternary Science Reviews](https://www.sciencedirect.com/journal/quaternary-science-reviews) Journal.
 
-The present repository will also be archived on Zenodo (TBA).
+The present repository is also archived on [Zenodo](https://doi.org/10.5281/zenodo.17977298).
 
 ## Contents
 
